@@ -1,0 +1,78 @@
+.container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.1);
+}
+
+.container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.container li {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.itemName {
+  font-weight: 500;
+}
+
+.quantityControls {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  justify-content: center;
+}
+
+.quantityControls button {
+  background: #f7f8fa;
+  border: 1px solid #e2e8f0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.price {
+  color: #38b2ac;
+  font-weight: 500;
+  text-align: right;
+}
+
+.total {
+  text-align: right;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.checkoutButton {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: #38b2ac;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.checkoutButton:hover {
+  background: #319795;
+}

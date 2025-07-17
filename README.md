@@ -7,7 +7,9 @@ A minimal, modern e-commerce frontend built with React, Redux Toolkit, and Vite.
 - Responsive navbar with hamburger menu
 - Home, Store, Cart, Order History, and Help pages
 - Product listing and cart management (add/remove/clear)
-- Redux Toolkit for state management (cart, UI)
+- Order placement and history tracking
+- Real-time notification system for user feedback
+- Redux Toolkit for state management (cart, UI, orders, auth)
 - Modular structure: components, features, slices
 - Tooltip component for UI hints
 - Clean, professional, and mobile-friendly design

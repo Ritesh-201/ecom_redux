@@ -8,6 +8,8 @@ const Help = () => {
         <li><b>React Router</b>: Navigation between pages.</li>
         <li><b>Redux Toolkit</b>: State management for features like cart and UI.</li>
         <li><b>Redux Slices</b>: Modular state logic for each feature.</li>
+        <li><b>Order Management</b>: Handling order placement and history.</li>
+        <li><b>Notifications</b>: Real-time user feedback system.</li>
         <li><b>Responsive Design</b>: Mobile-friendly layouts.</li>
         <li><b>Tooltips</b>: UI hints for better UX.</li>
       </ul>

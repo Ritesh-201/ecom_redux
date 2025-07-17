@@ -47,6 +47,21 @@
   color: #38b2ac;
 }
 
+.logoutButton {
+  background: transparent;
+  border: 1px solid #e2e8f0;
+  color: #e53e3e;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.logoutButton:hover {
+  background: #fed7d7;
+  color: #c53030;
+}
+
 @media (max-width: 768px) {
   .menuIcon {
     display: block;

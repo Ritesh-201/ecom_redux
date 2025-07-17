@@ -1,8 +1,10 @@
 
 import styles from './Navbar.module.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import HamburgerIcon from './HamburgerIcon';
+import { useSelector, useDispatch } from 'react-redux';
+import { logout } from '../../features/auth/authSlice';
 
 const navLinks = [
   { name: 'Home', path: '/' },
@@ -14,6 +16,15 @@ const navLinks = [
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
+  const { isAuthenticated } = useSelector(state => state.auth);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    dispatch(logout());
+    setOpen(false);
+    navigate('/');
+  };
 
   return (
     <nav className={styles.navbar}>
@@ -27,6 +38,15 @@ const Navbar = () => {
             <Link to={link.path} onClick={() => setOpen(false)}>{link.name}</Link>
           </li>
         ))}
+        {isAuthenticated ? (
+          <li>
+            <button onClick={handleLogout} className={styles.logoutButton}>Logout</button>
+          </li>
+        ) : (
+          <li>
+            <Link to="/login" onClick={() => setOpen(false)}>Login</Link>
+          </li>
+        )}
       </ul>
     </nav>
   );
