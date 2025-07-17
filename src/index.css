@@ -12,9 +12,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
 body {
   margin: 0;
   min-width: 320px;
@@ -22,13 +19,11 @@ body {
   background: #f7f8fa;
 }
 
-
 h1, h2, h3 {
   font-weight: 700;
   color: #2d3748;
   margin-bottom: 0.5em;
 }
-
 
 button {
   border-radius: 6px;
@@ -52,12 +47,14 @@ button:focus-visible {
   outline: 2px solid #38b2ac;
 }
 
-
 @media (max-width: 768px) {
+  :root {
+    font-size: 15px; /* Slightly smaller base font size for mobile */
+  }
   body {
     padding: 0;
   }
   h1 {
-    font-size: 2em;
+    font-size: 1.8em; /* Adjust h1 for mobile */
   }
 }

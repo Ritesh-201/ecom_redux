@@ -37,3 +37,22 @@
   padding: 0;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  .order {
+    padding: 1rem;
+  }
+  .orderDetails h3 {
+    font-size: 1.1rem;
+  }
+  .orderDetails p {
+    font-size: 0.9rem;
+  }
+  .itemList li {
+    font-size: 0.95rem;
+  }
+}

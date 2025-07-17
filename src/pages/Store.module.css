@@ -21,3 +21,35 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 1.5rem;
 }
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Smaller cards on mobile */
+    gap: 1rem;
+  }
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  .container h2 {
+    font-size: 1.8rem;
+  }
+  .container p {
+    font-size: 1rem;
+  }
+}
+
+.loadMoreButton {
+  margin-top: 2rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #38b2ac;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.loadMoreButton:hover {
+  background-color: #319795;
+}

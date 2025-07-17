@@ -41,3 +41,21 @@
 .form button:hover {
   background: #319795;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  .form {
+    padding: 1.5rem;
+  }
+  .form h2 {
+    font-size: 1.5rem;
+  }
+  .form input {
+    padding: 0.7rem;
+  }
+  .form button {
+    padding: 0.7rem;
+  }
+}

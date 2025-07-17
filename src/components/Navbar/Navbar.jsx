@@ -28,26 +28,28 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}>Redux-Ecom</div>
-      <div className={styles.menuIcon} onClick={() => setOpen(!open)}>
-        <HamburgerIcon size={28} color="#2d3748" />
+      <div className={styles.navbarContent}>
+        <div className={styles.logo}>Ecom Demo</div>
+        <div className={styles.menuIcon} onClick={() => setOpen(!open)}>
+          <HamburgerIcon size={28} color="#2d3748" isOpen={open} />
+        </div>
+        <ul className={`${styles.navLinks} ${open ? styles.open : ''}`}>
+          {navLinks.map(link => (
+            <li key={link.name}>
+              <Link to={link.path} onClick={() => setOpen(false)}>{link.name}</Link>
+            </li>
+          ))}
+          {isAuthenticated ? (
+            <li>
+              <button onClick={handleLogout} className={styles.logoutButton}>Logout</button>
+            </li>
+          ) : (
+            <li>
+              <Link to="/login" onClick={() => setOpen(false)}>Login</Link>
+            </li>
+          )}
+        </ul>
       </div>
-      <ul className={`${styles.navLinks} ${open ? styles.open : ''}`}>
-        {navLinks.map(link => (
-          <li key={link.name}>
-            <Link to={link.path} onClick={() => setOpen(false)}>{link.name}</Link>
-          </li>
-        ))}
-        {isAuthenticated ? (
-          <li>
-            <button onClick={handleLogout} className={styles.logoutButton}>Logout</button>
-          </li>
-        ) : (
-          <li>
-            <Link to="/login" onClick={() => setOpen(false)}>Login</Link>
-          </li>
-        )}
-      </ul>
     </nav>
   );
 };

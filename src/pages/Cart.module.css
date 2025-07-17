@@ -40,10 +40,9 @@
 .quantityControls button {
   background: #f7f8fa;
   border: 1px solid #e2e8f0;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  border-radius: 25%;
   cursor: pointer;
+  transition: background 0.2s;
 }
 
 .price {
@@ -75,4 +74,33 @@
 
 .checkoutButton:hover {
   background: #319795;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+  .container li {
+    grid-template-columns: 1fr 1fr; /* Stack quantity and price on smaller screens */
+    grid-template-rows: auto auto;
+    gap: 0.5rem;
+  }
+  .itemName {
+    grid-column: 1 / -1; /* Span full width */
+    text-align: left;
+  }
+  .quantityControls {
+    justify-content: flex-start;
+  }
+  .price {
+    text-align: right;
+  }
+  .total {
+    font-size: 1.1rem;
+  }
+  .checkoutButton {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
 }

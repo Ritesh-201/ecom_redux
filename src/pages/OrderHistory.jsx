@@ -21,7 +21,7 @@ const OrderHistory = () => {
           </div>
           <ul className={styles.itemList}>
             {order.items.map(item => (
-              <li key={item.id}>{item.name}</li>
+              <li key={item.id}>{item.title}</li>
             ))}
           </ul>
         </div>

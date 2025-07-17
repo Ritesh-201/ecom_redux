@@ -40,7 +40,7 @@ const Cart = () => {
       <ul>
         {cart.items.map(item => (
           <li key={item.id}>
-            <span className={styles.itemName}>{item.name}</span>
+            <span className={styles.itemName}>{item.title}</span>
             <div className={styles.quantityControls}>
               <button onClick={() => dispatch(decreaseQuantity({ tenantId, itemId: item.id }))}>-</button>
               <span>{item.quantity}</span>
